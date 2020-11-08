@@ -8,17 +8,18 @@ import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_snackbar.*
 
 class SnackbarActivity : AppCompatActivity(), View.OnClickListener {
 
-    private val TAG = "AUC-SNACKBAR"
+//    private val TAG = "AUC-SNACKBAR"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_snackbar)
 
-        findViewById<View>(R.id.btnShowSnackbar).setOnClickListener(this)
-        findViewById<View>(R.id.btnShowActionSnackbar).setOnClickListener(this)
+        btnShowSnackbar.setOnClickListener(this)
+        btnShowActionSnackbar.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -30,14 +31,14 @@ class SnackbarActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun showSnackbar() {
         // Create and show the snackbar
-        val snackbar = Snackbar.make(findViewById(R.id.myCoordinatorLayout),
+        val snackbar = Snackbar.make(myCoordinatorLayout,
                 "This is a snackbar", Snackbar.LENGTH_LONG)
         snackbar.show()
     }
 
     private fun showActionSnackbar() {
         // Create a snackbar that has an action item
-        val snackbar = Snackbar.make(findViewById(R.id.myCoordinatorLayout),
+        val snackbar = Snackbar.make(myCoordinatorLayout,
                 "This is a snackbar", Snackbar.LENGTH_LONG)
         snackbar.setAction("Very Cool") {
             Toast.makeText(applicationContext, "Snackbar Action Click!",

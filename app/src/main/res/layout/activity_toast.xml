@@ -32,9 +32,6 @@
             android:layout_height="wrap_content"
             android:text="Short"
             android:id="@+id/rbShort"
-            android:layout_alignBottom="@+id/textView"
-            android:layout_toRightOf="@+id/textView"
-            android:layout_toEndOf="@+id/textView"
             android:checked="true" />
 
         <RadioButton
@@ -42,9 +39,6 @@
             android:layout_height="wrap_content"
             android:text="Long"
             android:id="@+id/rbLong"
-            android:layout_alignBottom="@+id/rbShort"
-            android:layout_toRightOf="@+id/rbShort"
-            android:layout_toEndOf="@+id/rbShort"
             android:checked="false" />
     </RadioGroup>
 

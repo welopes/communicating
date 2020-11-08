@@ -12,6 +12,7 @@ import android.view.View
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
+import kotlinx.android.synthetic.main.activity_notification.*
 
 class NotificationActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -19,7 +20,7 @@ class NotificationActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notification)
 
-        findViewById<View>(R.id.btnNotification).setOnClickListener(this)
+        btnNotification.setOnClickListener(this)
 
         // For API 26 and later, we have to create a channel otherwise the notification
         // won't be displayed. This can be called multiple times without harm - if there's

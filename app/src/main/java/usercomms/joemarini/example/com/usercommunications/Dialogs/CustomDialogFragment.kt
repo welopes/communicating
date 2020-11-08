@@ -1,15 +1,10 @@
 package usercomms.joemarini.example.com.usercommunications.Dialogs
 
 import android.app.Dialog
-import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-
-import androidx.fragment.app.DialogFragment
 import androidx.appcompat.app.AlertDialog
-
+import androidx.fragment.app.DialogFragment
 import usercomms.joemarini.example.com.usercommunications.R
 
 class CustomDialogFragment : DialogFragment() {

@@ -2,9 +2,7 @@ package usercomms.joemarini.example.com.usercommunications
 
 import android.app.NotificationManager
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-
 import androidx.appcompat.app.AppCompatActivity
 
 class NotificationResultActivity : AppCompatActivity() {

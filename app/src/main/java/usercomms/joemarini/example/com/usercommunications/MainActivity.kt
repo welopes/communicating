@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -12,10 +13,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<View>(R.id.btnLaunchToast).setOnClickListener(this)
-        findViewById<View>(R.id.btnLaunchSnackbar).setOnClickListener(this)
-        findViewById<View>(R.id.btnLaunchDialog).setOnClickListener(this)
-        findViewById<View>(R.id.btnLaunchNotification).setOnClickListener(this)
+        btnLaunchToast.setOnClickListener(this)
+        btnLaunchSnackbar.setOnClickListener(this)
+        btnLaunchDialog.setOnClickListener(this)
+        btnLaunchNotification.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {

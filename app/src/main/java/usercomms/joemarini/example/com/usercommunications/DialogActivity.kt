@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
+import kotlinx.android.synthetic.main.activity_dialog.*
 import usercomms.joemarini.example.com.usercommunications.Dialogs.CustomDialogFragment
 import usercomms.joemarini.example.com.usercommunications.Dialogs.SimpleDialogFragment
 import usercomms.joemarini.example.com.usercommunications.Dialogs.SingleChoiceDialogFragment
@@ -19,10 +20,10 @@ class DialogActivity : AppCompatActivity(), View.OnClickListener, SimpleDialogFr
         setContentView(R.layout.activity_dialog)
 
         // set up button click handlers
-        findViewById<View>(R.id.btnSimpleDialog).setOnClickListener(this)
-        findViewById<View>(R.id.btnShowDatePicker).setOnClickListener(this)
-        findViewById<View>(R.id.btnShowChoiceDialog).setOnClickListener(this)
-        findViewById<View>(R.id.btnShowCustomDialog).setOnClickListener(this)
+        btnSimpleDialog.setOnClickListener(this)
+        btnShowDatePicker.setOnClickListener(this)
+        btnShowChoiceDialog.setOnClickListener(this)
+        btnShowCustomDialog.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -54,7 +55,7 @@ class DialogActivity : AppCompatActivity(), View.OnClickListener, SimpleDialogFr
     private fun showSimpleDialog() {
         val simpleDialog = SimpleDialogFragment()
         // Use setCancelable() to make the dialog non-cancelable
-        simpleDialog.isCancelable = false;
+        simpleDialog.isCancelable = false
         simpleDialog.show(supportFragmentManager, "SimpleDialogFragment")
     }
 

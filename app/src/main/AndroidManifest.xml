@@ -27,7 +27,7 @@
         <activity
             android:name=".NotificationActivity"
             android:label="@string/NotificationsActivity" />
-        <activity android:name=".NotificationResultActivity"></activity>
+        <activity android:name=".NotificationResultActivity" />
     </application>
 
 </manifest>
